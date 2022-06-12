@@ -13,11 +13,11 @@ def checkout(skus):
     for cha in skus:
         if cha == 'A':
             a = a + 1
-        if cha == 'B':
+        elif cha == 'B':
             b = b + 1
-        if cha == 'C':
+        elif cha == 'C':
             c = c + 1
-        if cha == 'D':
+        elif cha == 'D':
             d = d + 1
         else:
             return -1
@@ -81,7 +81,8 @@ def checkout(skus):
     
     return total_cost
     
-#checkout("AxA")
+#out = checkout("a")
+
 
 
 
