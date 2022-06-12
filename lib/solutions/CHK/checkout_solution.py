@@ -89,12 +89,6 @@ def offer_type_f(cnt,o,sp):
     cost_type_f = cnt * sp
     return cost_type_f
     
-#out = checkout("EE")
-#print(out)
-##
-
-
-
-
-
-
+out = checkout("EEB")
+print(out)
+#
