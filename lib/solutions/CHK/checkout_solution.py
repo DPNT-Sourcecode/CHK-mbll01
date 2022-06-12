@@ -23,20 +23,20 @@ def checkout(skus):
         if i == 4:
             nbr_off_e = cnt[4]//2
             if cnt[1]>0:
-                cnt[1] = cnt[1] - nbr_off_e
-            tcost = tcost + (cnt[i] * cost[i])
+#                cnt[1] = cnt[1] - nbr_off_e
+                tcost = tcost + (cnt[i] * cost[i]) - (nbr_off_e * cost[1])
         #Offer N
         elif i == 13:
             nbr_off_n = cnt[13]//3
             if cnt[12]>0:
-                cnt[12] = cnt[12] - nbr_off_n
-            tcost = tcost + (cnt[i] * cost[i])
+#                cnt[12] = cnt[12] - nbr_off_n
+                tcost = tcost + (cnt[i] * cost[i]) - (nbr_off_n * cost[12])
         #Offer R
         elif i == 17:
             nbr_off_r = cnt[17]//3
             if cnt[16]>0:
-                cnt[16] = cnt[16] - nbr_off_r
-            tcost = tcost + (cnt[i] * cost[i])
+#                cnt[16] = cnt[16] - nbr_off_r
+                tcost = tcost + (cnt[i] * cost[i])- (nbr_off_r * cost[16])
         #Offer A
         elif i == 0:
             tcost = tcost + offer_type_a(cnt[i],5,200,3,130,cost[i])
@@ -89,6 +89,6 @@ def offer_type_f(cnt,o,sp):
     cost_type_f = cnt * sp
     return cost_type_f
     
-out = checkout("EEB")
-print(out)
-#
+#out = checkout("EEB")
+#print(out)
+##
