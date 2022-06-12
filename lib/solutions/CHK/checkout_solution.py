@@ -22,13 +22,13 @@ def checkout(skus):
     for i in idxprod:
         #Offer E
         if i == 4:
-            tcost = tcost + offer_type_e(cnt[i],2,cost[i],cnt[1],cost[1])
+            tcost, cnt = tcost + offer_type_e(cnt[i],2,cost[i],cnt[1],cost[1],cnt,1)
         #Offer N
         elif i == 13:
-            tcost = tcost + offer_type_e(cnt[i],3,cost[i],cnt[12],cost[12])
+            tcost, cnt  = tcost + offer_type_e(cnt[i],3,cost[i],cnt[12],cost[12],cnt,12)
         #Offer R
         elif i == 17:
-            tcost = tcost + offer_type_e(cnt[i],3,cost[i],cnt[16],cost[16])
+            tcost, cnt  = tcost + offer_type_e(cnt[i],3,cost[i],cnt[16],cost[16],cnt,16)
         #Offer A
         elif i == 0:
             tcost = tcost + offer_type_a(cnt[i],5,200,3,130,cost[i])
@@ -75,13 +75,12 @@ def offer_type_b(cnt,o,op,sp):
     cost_type_b = nbr_off*op + single*sp
     return cost_type_b
 
-def offer_type_e(cnt,o,sp,cnto,spo):
+def offer_type_e(cnt,o,sp,cnto,spo,cnt_arr,cnt_idx):
     nbr_off = cnt//o
     if cnto>0:
-        cost_type_e = (cnt * sp) - (nbr_off * spo)
-    else:
-        cost_type_e = cnt * sp
-    return cost_type_e
+        cnt_arr[cnt_idx] = cnt_arr[cnt_idx] -  nbr_off
+    cost_type_e = cnt * sp
+    return cost_type_e, cnt_arr
 
 def offer_type_f(cnt,o,sp):
     nbr_off = cnt//o
@@ -91,5 +90,6 @@ def offer_type_f(cnt,o,sp):
     
 out = checkout("EEEEBB")
 print(out)
+
 
 
