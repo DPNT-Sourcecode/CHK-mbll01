@@ -93,7 +93,3 @@ def offer_type_f(cnt,o,sp):
     
 #out = checkout("EEEEBB")
 #print(out)
-
-
-
-
