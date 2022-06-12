@@ -82,8 +82,3 @@ def checkout(skus):
     return total_cost
     
 #out = checkout("a")
-
-
-
-
-
