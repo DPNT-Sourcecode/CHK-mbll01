@@ -6,6 +6,7 @@ def checkout(skus):
     
     arr = np.zeros((26,1))
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    cost = [50, 30, 20, 15, 40, 10, 20, 10, 35]
     
     #verify for repeated elements
     for cha in skus:
@@ -44,18 +45,33 @@ def checkout(skus):
     cost_f = f * 10
     
     
-    #add non-offer costs
-    noff = 0
-    for i in :
-        noff = 
+    #add total cost
+    tcost = 0
+    for i in range(0,26):
+        #Offer E
+        if i == 4:
+        #Offer A
+        elif i == 0:
+        #Offer B
+        elif i == 1:
+        #Offer F
+        elif i == 5:
+        #Offer H
+        elif i == 7:
+        #Offer K
+        elif i == 10:
+        #Offer H
+        elif i == 7:
+        else:
+            tcost = 
     
-    total_cost = cost_a + cost_b + cost_c + cost_d + cost_e + cost_f
         
-    return total_cost
+    return tcost
     
 #out = checkout("EE")
 #print(out)
 ##
+
 
 
 
