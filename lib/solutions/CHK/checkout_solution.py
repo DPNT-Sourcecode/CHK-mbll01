@@ -4,13 +4,12 @@ import numpy as np
 # skus = unicode string
 def checkout(skus):
     
-    cnt = np.zeros((26,1))
+    cnt = np.zeros((26))
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     cost = [50, 30, 20, 15, 40, 10, 20, 10, 35, 60, 80, 90, 15, 40, 10, 50, 30, 50, 30, 20, 40, 50, 20, 90, 10, 50]
     
     #verify for repeated elements
     for cha in skus:
-        
         if cha in alphabet:
             idx_letter = alphabet.find(cha)
             cnt[idx_letter] = cnt[idx_letter] + 1
@@ -27,13 +26,13 @@ def checkout(skus):
                 cnt[1] = cnt[1] - nbr_off_e
             tcost = tcost + (cnt[i] * cost[i])
         #Offer N
-        if i == 13:
+        elif i == 13:
             nbr_off_n = cnt[13]//3
             if cnt[12]>0:
                 cnt[12] = cnt[12] - nbr_off_n
             tcost = tcost + (cnt[i] * cost[i])
         #Offer R
-        if i == 17:
+        elif i == 17:
             nbr_off_r = cnt[17]//3
             if cnt[16]>0:
                 cnt[16] = cnt[16] - nbr_off_r
@@ -90,9 +89,9 @@ def offer_type_f(cnt,o,sp):
     cost_type_f = cnt * sp
     return cost_type_f
     
-out = checkout("EE")
-print(out)
-#
+#out = checkout("EE")
+#print(out)
+##
 
 
 
