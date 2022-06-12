@@ -37,7 +37,7 @@ def checkout(skus):
             tcost = tcost + offer_type_a(cnt[i],5,200,3,130,cost[i])
         #Offer B
         elif i == 1:
-            tcost = tcost + offer_type_b(cnt[i],2,45,30)
+            tcost = tcost + offer_type_b(cnt[i],2,45,cost[i])
         #Offer F
         elif i == 5:
             tcost = tcost + offer_type_f(cnt[i],2+1,cost[i])
@@ -46,13 +46,13 @@ def checkout(skus):
             tcost = tcost + offer_type_a(cnt[i],10,80,5,45,cost[i])
         #Offer K
         elif i == 10:
-            tcost = tcost + offer_type_b(cnt[i],2,150,80)
+            tcost = tcost + offer_type_b(cnt[i],2,120,cost[i])
         #Offer P
         elif i == 15:
-            tcost = tcost + offer_type_b(cnt[i],5,200,50)
+            tcost = tcost + offer_type_b(cnt[i],5,200,cost[i])
         #Offer Q
         elif i == 16:
-            tcost = tcost + offer_type_b(cnt[i],3,80,30)
+            tcost = tcost + offer_type_b(cnt[i],3,80,cost[i])
         #Offer U
         elif i == 20:
             tcost = tcost + offer_type_f(cnt[i],3+1,cost[i])
@@ -127,6 +127,7 @@ def new_offer(cnt):
         
 #out = checkout("EEEEBB")
 #print(out)
+
 
 
 
