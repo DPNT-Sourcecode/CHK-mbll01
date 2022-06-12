@@ -27,12 +27,6 @@ def checkout(skus):
             tcost = tcost + offer_type_e(cnt[i],3,cost[i],cnt[12],cost[12])
         #Offer R
         elif i == 17:
-            nbr_off_r = cnt[17]//3
-            if cnt[16]>0:
-#                cnt[16] = cnt[16] - nbr_off_r
-                tcost = tcost + (cnt[i] * cost[i])- (nbr_off_r * cost[16])
-            else:
-                tcost = tcost + (cnt[i] * cost[i])
             tcost = tcost + offer_type_e(cnt[i],3,cost[i],cnt[16],cost[16])
         #Offer A
         elif i == 0:
@@ -97,3 +91,4 @@ def offer_type_f(cnt,o,sp):
 out = checkout("E")
 print(out)
 #
+
