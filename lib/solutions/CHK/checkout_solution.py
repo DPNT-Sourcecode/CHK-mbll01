@@ -5,13 +5,13 @@
 def checkout(skus):
     #extract number of products
     a_idx = skus.find('A')
+    
+    if ( (a_idx == -1) or (b_idx == -1) or (c_idx == -1) or (d_idx == -1)):
+        return -1
+    
     b_idx = skus.find('B')
     c_idx = skus.find('C')
     d_idx = skus.find('D')
-    
-    if ( (a_idx == -1) or (b_idx == -1) or (c_idx == -1) or (d_idx == -1)):
-#        print("-1")
-        return -1
     
     a = int(skus[0:a_idx])
     b = int(skus[a_idx+1:b_idx])
@@ -38,6 +38,7 @@ def checkout(skus):
     return total_cost
     
 #checkout("3A3B3C3D")
+
 
 
 
