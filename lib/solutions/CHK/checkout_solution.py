@@ -9,42 +9,45 @@ def checkout(skus):
     
     #verify for repeated elements
     for cha in skus:
-        if cha == 'A':
-            arr[0] = arr[0] + 1
-        elif cha == 'B':
-            b = b + 1
-        elif cha == 'C':
-            c = c + 1
-        elif cha == 'D':
-            d = d + 1
-        elif cha == 'E':
-            e = e + 1
-        elif cha == 'F':
-            f = f + 1
+        
+        if cha in alphabet:
+            idx_letter = alphabet.find(cha)
+            arr[idx_letter] = arr[idx_letter] + 1
         else:
             return -1 
-        
+    
+    #Offer E
     nbr_off_e = e//2
     if b>0:
         b = b - nbr_off_e
     cost_e = e * 40
     
+    #Offer A
     nbr_off_a5 = a//5
     after_a5 = a - nbr_off_a5*5
     nbr_off_a3 = after_a5//3
     single_a = after_a5 - nbr_off_a3*3 
     cost_a = nbr_off_a5*200 + nbr_off_a3*130 + single_a*50
     
+    #Offer B
     nbr_off_b = b//2 
     single_b = b - nbr_off_b*2 
     cost_b = nbr_off_b*45 + single_b*30
     
+    
     cost_c = c * 20
     cost_d = d * 15
     
+    #Offer F
     nbr_off_f = f//3
     f = f - nbr_off_f
     cost_f = f * 10
+    
+    
+    #add non-offer costs
+    noff = 0
+    for i in :
+        noff = 
     
     total_cost = cost_a + cost_b + cost_c + cost_d + cost_e + cost_f
         
@@ -53,5 +56,6 @@ def checkout(skus):
 #out = checkout("EE")
 #print(out)
 ##
+
 
 
