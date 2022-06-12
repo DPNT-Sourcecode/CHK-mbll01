@@ -17,12 +17,6 @@ def checkout(skus):
         else:
             return -1 
     
-    #Offer F
-    nbr_off_f = f//3
-    f = f - nbr_off_f
-    cost_f = f * 10
-    
-    
     #add total cost
     tcost = 0
     for i in range(0,26):
@@ -49,21 +43,24 @@ def checkout(skus):
             tcost = tcost + offer_type_a(cnt[i],5,200,3,130,cost[i])
         #Offer B
         elif i == 1:
-            #Offer B
-            tcost = tcost + offer_type_b((cnt,o,op,sp))
+            tcost = tcost + offer_type_b(cnt[i],2,45,30)
         #Offer F
         elif i == 5:
+            
         #Offer H
         elif i == 7:
             tcost = tcost + offer_type_a(cnt[i],10,80,5,45,cost[i])
         #Offer K
         elif i == 10:
+            tcost = tcost + offer_type_b(cnt[i],2,150,80)
         #Offer H
         elif i == 7:
         #Offer P
         elif i == 15:
+            tcost = tcost + offer_type_b(cnt[i],5,200,50)
         #Offer Q
         elif i == 16:
+            tcost = tcost + offer_type_b(cnt[i],3,80,30)
         #Offer U
         elif i == 20:
         #Offer V
@@ -87,10 +84,16 @@ def offer_type_b(cnt,o,op,sp):
     single = cnt - nbr_off*o 
     cost_type_b = nbr_off_b*op + single*sp
     return cost_type_b
+
+def offer_type_f(cnt,o,op,sp):
+    nbr_off_f = f//3
+    f = f - nbr_off_f
+    cost_f = f * 10
     
 out = checkout("EE")
 print(out)
 #
+
 
 
 
