@@ -26,7 +26,8 @@ def checkout(skus):
             return -1 
         
     nbr_offers_e = e//2
-    b = b - nbr_offers_e
+    if b>0:
+        b = b - nbr_offers_e
     cost_e = e * 40
     
     nbr_off_a5 = a//5
@@ -46,8 +47,9 @@ def checkout(skus):
         
     return total_cost
     
-#out = checkout("ABCDEE")
+#out = checkout("EE")
 #print(out)
+##
 
 
 
