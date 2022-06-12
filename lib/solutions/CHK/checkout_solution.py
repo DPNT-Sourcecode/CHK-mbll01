@@ -31,9 +31,9 @@ def checkout(skus):
     
     nbr_off_a5 = a//5
     after_a5 = a - nbr_off_a5*5
-    nbr_offers_a_3 = after_a5//3
-    single_a = single_a_5 - nbr_offers_a_3*3 
-    cost_a = nbr_offers_a*130 + single_a*50
+    nbr_off_a3 = after_a5//3
+    single_a = after_a5 - nbr_off_a3*3 
+    cost_a = nbr_off_a5*200 + nbr_off_a3*130 + single_a*50
     
     nbr_offers_b = b//2 
     single_b = b - nbr_offers_b*2 
@@ -46,7 +46,8 @@ def checkout(skus):
         
     return total_cost
     
-out = checkout("a")
-print(out)
+#out = checkout("ABCDEE")
+#print(out)
+
 
 
