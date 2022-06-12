@@ -50,6 +50,3 @@ def checkout(skus):
 #out = checkout("EE")
 #print(out)
 ##
-
-
-
