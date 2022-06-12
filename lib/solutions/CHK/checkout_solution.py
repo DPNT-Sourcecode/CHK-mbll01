@@ -3,25 +3,33 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+    
+    cnt_a = 0
+    cnt_b = 0
+    cnt_c = 0
+    cnt_d = 0 
+    
     #verify for repeated elements
     for cha in skus:
         if cha == 'A':
             cnt_a = cnt_a + 1
         if cha == 'B':
             cnt_b = cnt_b + 1
-        if cha == 'C'
+        if cha == 'C':
             cnt_c = cnt_c + 1
-        if cha == 'D'
+        if cha == 'D':
             cnt_d = cnt_d + 1
     
-    if ( (cnt_a > 1) or )
+    if ( (cnt_a > 1) or (cnt_b > 1) or (cnt_c > 1) or (cnt_d > 1)):
+        return -1
     
     #extract number of products
     a_idx = skus.find('A')
     
     if a_idx == -1:
         a = 0
-#    elif 
+    elif a_idx == 0:
+        a = 1
     else:
         a = int(skus[0:a_idx])
         
@@ -29,6 +37,8 @@ def checkout(skus):
     
     if b_idx == -1:
         b = 0
+    elif b_idx == 0:
+        b = 1
     else:
         b = int(skus[a_idx+1:b_idx])
         
@@ -36,6 +46,8 @@ def checkout(skus):
         
     if c_idx == -1:
         c = 0
+    elif c_idx == 0:
+        c = 1
     else:
         c = int(skus[b_idx+1:c_idx])   
     
@@ -43,6 +55,8 @@ def checkout(skus):
     
     if d_idx == -1:
         d = 0
+    elif d_idx == 0:
+        d = 1
     else:
         d = int(skus[c_idx+1:d_idx]) 
     
@@ -66,4 +80,5 @@ def checkout(skus):
     return total_cost
     
 #checkout("AxA")
+
 
