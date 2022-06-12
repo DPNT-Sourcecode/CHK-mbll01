@@ -10,7 +10,7 @@ def checkout(skus):
     d_idx = skus.find('D')
     
     if ( (a_idx == -1) or (b_idx == -1) or (c_idx == -1) or (d_idx == -1)):
-        print("-1")
+#        print("-1")
         return -1
     
     a = int(skus[0:a_idx])
@@ -18,7 +18,7 @@ def checkout(skus):
     c = int(skus[b_idx+1:c_idx])
     d = int(skus[c_idx+1:d_idx])
     
-    print('A = '+str(a)+' B = '+str(b)+' C = '+str(c)+' D = '+str(d))
+#    print('A = '+str(a)+' B = '+str(b)+' C = '+str(c)+' D = '+str(d))
     
     nbr_offers_a = (a//3) 
     single_a = a - nbr_offers_a*3 
@@ -33,11 +33,12 @@ def checkout(skus):
     
     total_cost = cost_a + cost_b + cost_c + cost_d
     
-    print(total_cost)
+#    print(total_cost)
     
     return total_cost
     
-checkout("2A2B2C2D")
+#checkout("3A3B3C3D")
+
 
 
 
