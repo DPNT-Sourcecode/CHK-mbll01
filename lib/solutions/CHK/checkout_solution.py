@@ -5,11 +5,12 @@ import numpy as np
 def checkout(skus):
     
     arr = np.zeros((26,1))
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     
     #verify for repeated elements
     for cha in skus:
         if cha == 'A':
-            a = a + 1
+            arr[0] = arr[0] + 1
         elif cha == 'B':
             b = b + 1
         elif cha == 'C':
@@ -52,4 +53,5 @@ def checkout(skus):
 #out = checkout("EE")
 #print(out)
 ##
+
 
