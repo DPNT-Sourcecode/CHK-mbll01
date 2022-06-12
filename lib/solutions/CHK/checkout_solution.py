@@ -44,6 +44,12 @@ def checkout(skus):
             if cnt[1]>0:
                 cnt[1] = cnt[1] - nbr_off_e
             tcost = tcost + (cnt[i] * cost[i])
+        #Offer N
+        if i == 13:
+            nbr_off_n = cnt[13]//3
+            if cnt[12]>0:
+                cnt[12] = cnt[12] - nbr_off_n
+            tcost = tcost + (cnt[i] * cost[i])
         #Offer A
         elif i == 0:
         #Offer B
@@ -64,8 +70,3 @@ def checkout(skus):
 #out = checkout("EE")
 #print(out)
 ##
-
-
-
-
-
