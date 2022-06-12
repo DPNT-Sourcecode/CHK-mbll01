@@ -101,8 +101,25 @@ def new_offer(cnt):
     totalp = cnt[18] + cnt[19] + cnt[23] + cnt[24] + cnt[25]
     nbr_off = totalp\\3
     single =  totalp - (nbr_off*3)
+    if single == 0:
+        psingle = 0
+    elif single == 1:
+        if cnt[23] > 0:
+            psingle = 17
+        elif ( (cnt[18] > 0) or (cnt[19] > 0) or (cnt[24] > 0) ):
+            psingle = 20
+        else:
+            psingle = 21
+    else: #single == 2
+        if (cnt[23] > 0):
+            if ( (cnt[18] > 0) or (cnt[19] > 0) or (cnt[24] > 0) ):
+                psingle = 17 + 20
+            else:
+                
+        
     
 #out = checkout("EEEEBB")
 #print(out)
+
 
 
