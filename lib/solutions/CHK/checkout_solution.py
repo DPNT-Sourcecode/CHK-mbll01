@@ -20,14 +20,14 @@ def checkout(skus):
         
     c_idx = skus.find('C')
         
-    if (c_idx == -1) or (b_idx == 0):
+    if (c_idx == -1) or (c_idx == 0):
         return -1
     else:
         c = int(skus[b_idx+1:c_idx])   
     
     d_idx = skus.find('D')
     
-    if d_idx == -1:
+    if (d_idx == -1) or (d_idx == 0):
         return -1
     else:
         d = int(skus[c_idx+1:d_idx]) 
@@ -47,9 +47,10 @@ def checkout(skus):
     
     total_cost = cost_a + cost_b + cost_c + cost_d
     
-    print(total_cost)
+#    print(total_cost)
     
     return total_cost
     
-checkout("AxA")
+#checkout("AxA")
+
 
