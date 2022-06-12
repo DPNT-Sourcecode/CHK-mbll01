@@ -1,15 +1,10 @@
-
+import numpy as np
 
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
     
-    a = 0
-    b = 0
-    c = 0
-    d = 0 
-    e = 0
-    f = 0
+    arr = np.zeros((26,1))
     
     #verify for repeated elements
     for cha in skus:
@@ -57,3 +52,4 @@ def checkout(skus):
 #out = checkout("EE")
 #print(out)
 ##
+
