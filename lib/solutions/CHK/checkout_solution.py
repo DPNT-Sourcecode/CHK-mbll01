@@ -19,6 +19,8 @@ def checkout(skus):
             c = c + 1
         if cha == 'D':
             d = d + 1
+        else:
+            return -1
     
 #    if ( (cnt_a > 1) or (cnt_b > 1) or (cnt_c > 1) or (cnt_d > 1)):
 #        return -1
@@ -80,6 +82,7 @@ def checkout(skus):
     return total_cost
     
 #checkout("AxA")
+
 
 
 
