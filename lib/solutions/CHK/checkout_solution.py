@@ -25,11 +25,20 @@ def checkout(skus):
     cost_a = nbr_offers_a*130 + single_a*50
     
     nbr_offers_b = (b//2) 
-    single_b = b - nbr_offers_b*3 
-    cost_b = nbr_offers_b*45 + single_a*50
+    single_b = b - nbr_offers_b*2 
+    cost_b = nbr_offers_b*45 + single_b*30
     
+    cost_c = c * 20
+    cost_d = d * 15
     
-checkout("1A20B5C0D")
+    total_cost = cost_a + cost_b + cost_c + cost_d
+    
+    print(total_cost)
+    
+    return total_cost
+    
+checkout("2A2B2C2D")
+
 
 
 
