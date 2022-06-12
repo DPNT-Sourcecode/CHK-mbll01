@@ -52,7 +52,7 @@ def checkout(skus):
             tcost = tcost + (cnt[i] * cost[i])
         #Offer A
         elif i == 0:
-            tcost = tcost + cost_a
+            tcost = tcost + cost_offer_type_A(i,5,200,3,130,cost[i])
         #Offer B
         elif i == 1:
         #Offer F
@@ -76,14 +76,16 @@ def checkout(skus):
         
     return tcost
 
-def offer_type_A(big_off, big_offprice, small_off, small_offprice, singleprice):
-    nbr_off_a5 = cnt[0]//5
-    after_a5 = cnt[0] - nbr_off_a5*5
+def cost_offer_type_A(i, bo, bop, so, sop, sp):
+    nbr_off_bo = cnt[i]//bo
+    after_bo = cnt[i] - (nbr_off_bo*bo)
     nbr_off_a3 = after_a5//3
-    single_a = after_a5 - nbr_off_a3*3 
-    cost_a = nbr_off_a5*200 + nbr_off_a3*130 + single_a*50
+    single_cnt = after_a5 - nbr_off_a3*3 
+    cost_a = nbr_off_bo*200 + nbr_off_a3*130 + single_cnt*sp
+    return cost_a
     
     
 out = checkout("EE")
 print(out)
 #
+
