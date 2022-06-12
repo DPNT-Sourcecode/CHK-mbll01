@@ -98,8 +98,11 @@ def offer_type_f(cnt,o,sp):
     return cost_type_f
 
 def new_offer(cnt):
-    total = 
+    totalp = cnt[18] + cnt[19] + cnt[23] + cnt[24] + cnt[25]
+    nbr_off = totalp\\3
+    single =  totalp - (nbr_off*3)
     
 #out = checkout("EEEEBB")
 #print(out)
+
 
