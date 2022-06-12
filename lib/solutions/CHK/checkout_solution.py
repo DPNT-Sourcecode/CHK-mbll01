@@ -59,8 +59,12 @@ def checkout(skus):
         #Offer V
         elif i == 21:
             tcost = tcost + offer_type_a(cnt[i],3,130,2,90,cost[i])
-#        #new offer
-#        elif i== 
+        #new offer
+        elif i== 18:
+            tcost = tcost + new_offer(cnt)
+        #skip others product in new offer
+        elif ( (i==19) or (i==23) or (i==24) or(i==25) ):
+            continue
         else:
             tcost = tcost + (cnt[i] * cost[i])
         
@@ -92,6 +96,10 @@ def offer_type_f(cnt,o,sp):
     cnt = cnt - nbr_off
     cost_type_f = cnt * sp
     return cost_type_f
+
+def new_offer(cnt):
+    total = 
     
 #out = checkout("EEEEBB")
 #print(out)
+
