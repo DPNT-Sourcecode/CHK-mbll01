@@ -8,6 +8,7 @@ def checkout(skus):
     
     if a_idx == -1:
         a = 0
+#    elif 
     else:
         a = int(skus[0:a_idx])
         
@@ -47,11 +48,8 @@ def checkout(skus):
     
     total_cost = cost_a + cost_b + cost_c + cost_d
     
-    print(total_cost)
+#    print(total_cost)
     
     return total_cost
     
-checkout("AxA")
-
-
-
+#checkout("AxA")
