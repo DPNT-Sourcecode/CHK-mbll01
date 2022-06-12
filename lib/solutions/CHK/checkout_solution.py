@@ -99,7 +99,7 @@ def offer_type_f(cnt,o,sp):
 
 def new_offer(cnt):
     totalp = cnt[18] + cnt[19] + cnt[23] + cnt[24] + cnt[25]
-    nbr_off = totalp\\3
+    nbr_off = totalp//3
     single =  totalp - (nbr_off*3)
     if single == 0:
         psingle = 0
@@ -115,11 +115,19 @@ def new_offer(cnt):
             if ( (cnt[18] > 0) or (cnt[19] > 0) or (cnt[24] > 0) ):
                 psingle = 17 + 20
             else:
-                
+                psingle = 17 + 21
+        else:
+            if ((cnt[18] + cnt[19] + cnt[24]) >= 2):
+                psingle = 20 + 20
+            elif ((cnt[18] + cnt[19] + cnt[24]) >= 1):
+                psingle = 20 + 21
+            else:
+                psingle = 21 + 21
+    return nbr_off*45 + psingle
         
-    
 #out = checkout("EEEEBB")
 #print(out)
+
 
 
 
