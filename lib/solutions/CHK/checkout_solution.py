@@ -7,6 +7,7 @@ def checkout(skus):
     cnt = np.zeros((26))
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     cost = [50, 30, 20, 15, 40, 10, 20, 10, 35, 60, 80, 90, 15, 40, 10, 50, 30, 50, 30, 20, 40, 50, 20, 90, 10, 50]
+    idxprod = [4,13,17,0,1,2,3,5,6,7,8,9,10,11,12,14,15,16,18,19,20,21,22,23,24,25,26]
     
     #verify for repeated elements
     for cha in skus:
@@ -18,7 +19,7 @@ def checkout(skus):
     
     #add total cost
     tcost = 0
-    for i in range(0,26):
+    for i in idxprod:
         #Offer E
         if i == 4:
             tcost = tcost + offer_type_e(cnt[i],2,cost[i],cnt[1],cost[1])
@@ -90,4 +91,5 @@ def offer_type_f(cnt,o,sp):
     
 out = checkout("EEEEBB")
 print(out)
+
 
