@@ -4,7 +4,7 @@ import numpy as np
 # skus = unicode string
 def checkout(skus):
     
-    arr = np.zeros((26,1))
+    cnt = np.zeros((26,1))
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     cost = [50, 30, 20, 15, 40, 10, 20, 10, 35]
     
@@ -13,15 +13,9 @@ def checkout(skus):
         
         if cha in alphabet:
             idx_letter = alphabet.find(cha)
-            arr[idx_letter] = arr[idx_letter] + 1
+            cnt[idx_letter] = cnt[idx_letter] + 1
         else:
             return -1 
-    
-    #Offer E
-    nbr_off_e = e//2
-    if b>0:
-        b = b - nbr_off_e
-    cost_e = e * 40
     
     #Offer A
     nbr_off_a5 = a//5
@@ -35,10 +29,6 @@ def checkout(skus):
     single_b = b - nbr_off_b*2 
     cost_b = nbr_off_b*45 + single_b*30
     
-    
-    cost_c = c * 20
-    cost_d = d * 15
-    
     #Offer F
     nbr_off_f = f//3
     f = f - nbr_off_f
@@ -50,6 +40,10 @@ def checkout(skus):
     for i in range(0,26):
         #Offer E
         if i == 4:
+            nbr_off_e = cnt[4]//2
+            if cnt[1]>0:
+                cnt[1] = cnt[1] - nbr_off_e
+            tcost = tcost + (cnt[i] * cost[i])
         #Offer A
         elif i == 0:
         #Offer B
@@ -63,14 +57,14 @@ def checkout(skus):
         #Offer H
         elif i == 7:
         else:
-            tcost = 
-    
+            tcost = tcost + (cnt[i] * cost[i])
         
     return tcost
     
 #out = checkout("EE")
 #print(out)
 ##
+
 
 
 
