@@ -18,11 +18,7 @@ def checkout(skus):
             return -1 
     
     #Offer A
-    nbr_off_a5 = a//5
-    after_a5 = a - nbr_off_a5*5
-    nbr_off_a3 = after_a5//3
-    single_a = after_a5 - nbr_off_a3*3 
-    cost_a = nbr_off_a5*200 + nbr_off_a3*130 + single_a*50
+    
     
     #Offer B
     nbr_off_b = b//2 
@@ -50,8 +46,19 @@ def checkout(skus):
             if cnt[12]>0:
                 cnt[12] = cnt[12] - nbr_off_n
             tcost = tcost + (cnt[i] * cost[i])
+        #Offer R
+        if i == 17:
+            nbr_off_r = cnt[17]//3
+            if cnt[16]>0:
+                cnt[16] = cnt[16] - nbr_off_r
+            tcost = tcost + (cnt[i] * cost[i])
         #Offer A
         elif i == 0:
+            nbr_off_a5 = a//5
+            after_a5 = a - nbr_off_a5*5
+            nbr_off_a3 = after_a5//3
+            single_a = after_a5 - nbr_off_a3*3 
+            cost_a = nbr_off_a5*200 + nbr_off_a3*130 + single_a*50
         #Offer B
         elif i == 1:
         #Offer F
@@ -62,11 +69,19 @@ def checkout(skus):
         elif i == 10:
         #Offer H
         elif i == 7:
+        #Offer P
+        elif i == 15:
+        #Offer Q
+        elif i == 16:
+        #Offer U
+        elif i == 20:
+        #Offer V
+        elif i == 21:
         else:
             tcost = tcost + (cnt[i] * cost[i])
         
     return tcost
     
-#out = checkout("EE")
-#print(out)
-##
+out = checkout("EE")
+print(out)
+#
