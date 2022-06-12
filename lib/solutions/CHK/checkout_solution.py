@@ -10,6 +10,7 @@ def checkout(skus):
     d_idx = skus.find('D')
     
     if ( (a_idx == -1) or (b_idx == -1) or (c_idx == -1) or (d_idx == -1)):
+        print("-1")
         return -1
     
     a = int(skus[0:a_idx])
@@ -20,9 +21,11 @@ def checkout(skus):
     print('A = '+str(a)+' B = '+str(b)+' C = '+str(c)+' D = '+str(d))
     
     
+    cost_a = 
     
     
 checkout("1A20B5C0D")
+
 
 
 
