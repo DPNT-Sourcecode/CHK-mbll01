@@ -20,11 +20,17 @@ def checkout(skus):
     
     print('A = '+str(a)+' B = '+str(b)+' C = '+str(c)+' D = '+str(d))
     
+    nbr_offers_a = (a//3) 
+    single_a = a - nbr_offers_a*3 
+    cost_a = nbr_offers_a*130 + single_a*50
     
-    cost_a = 
+    nbr_offers_b = (b//2) 
+    single_b = b - nbr_offers_b*3 
+    cost_b = nbr_offers_b*45 + single_a*50
     
     
 checkout("1A20B5C0D")
+
 
 
 
